@@ -1,0 +1,4 @@
+1. Every Possible URL Pattern 
+2. Every Possible View Function mapped with URL patterns
+3. HTML configuration 
+4. Render HTML pages according to view function
