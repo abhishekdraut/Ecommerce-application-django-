@@ -10,11 +10,12 @@ def homePage(request):
     # productCategories = ProductModels.ProductCategory.objects.filter(status=True)
     # products = ProductModels.Product.objects.filter(status=True).order_by('-id')[:9]
     navigationCategory=ProductCategory.objects.filter(status=True).order_by("-id")[:5]
-    print(navigationCategory)
+    
     categories = ProductCategory.objects.filter(status=True).order_by("-id")[1:]
-    print(categories)
+    randomProducts=Product.objects.filter(status=True).order_by("?")[:9]
+    print(randomProducts)
 
-    return render(request, 'index.html',{"navigationCategory":navigationCategory,"categories":categories})
+    return render(request, 'index.html',{"navigationCategory":navigationCategory,"categories":categories,'products':randomProducts})
     
 
     # return render(request, 'index.html', {
