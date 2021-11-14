@@ -130,7 +130,7 @@ USE_TZ = True
 # Example: 127.0.0.1:8000/assets/file_name
 STATIC_URL = '/static-files/'
 
-# STATIC_ROOT to define a path where all the static files will be copied
+# STATIC_ROOT to define a path where all the static files will be copied``
 # Example: PROJECT_ROOT/assets
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 

@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.homePage, name="homePage"),
-    path('category-product/<int:product_category_id>', views.CategoryProducts, name="CategoryProducts"),
-    path('product-details/<int:product_id>', views.ProductDetails, name="ProductDetails")
+    path('category/<int:cat_id>',views.categorywise_product,name="categorywise_products"),
+    path('product/<int:product_id>/<int:cat_id2>',views.fullPageDetail,name='fullPagePoductDetails')
+    
 ]

@@ -2,11 +2,16 @@
 {% load static %}
 {% block content %}
 <section class="hero-area bg-1 text-center overly">
+    <div style="color: white ; font-size:35px; font-weight:bold">
+        Designed For Cart, <br>Engineered To Last.
+    </div>
     <!-- Container Start -->
     <div class="container">
         <div class="row">
+        
             <div class="col-md-12">
                 <!-- Advance Search -->
+                
                 <div class="advance-search">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -15,23 +20,18 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-7">
                                             <input type="text" class="form-control my-2 my-lg-1" id="inputtext4"
-                                                placeholder="What are you looking for">
+                                                placeholder="Enter your product name for search">
                                         </div>
-                                        <div class="form-group col-md-3">
-                                            <select class="w-100 form-control mt-lg-1 mt-md-2">
-                                                <option value="">Category</option>
-                                                {% for productCategory in productCategories %}
-                                                    <option value="{{productCategory.id}}">{{productCategory.name|title}}</option>
-                                                {% endfor %}
-                                            </select>
-                                        </div>
+                                        
                                         <div class="form-group col-md-2 align-self-center">
                                             <button type="submit" class="btn btn-primary">Search Now</button>
                                         </div>
                                     </div>
                                 </form>
+                                
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -53,29 +53,29 @@
             <!-- offer 01 -->
             <div class="col-lg-12">
                 <div class="trending-ads-slide">
-                    {% for product in products %}
+                    
                         <div class="col-sm-12 col-lg-4">
                             <!-- product card -->
                             <div class="product-item bg-light">
                                 <div class="card">
                                     <div class="thumb-content">
-                                        <div class="price">${{product.price}}</div>
-                                        <a href="{% url 'ProductDetails' product_id=product.id %}">
-                                            <img class="card-img-top img-fluid" src="{{product.image.url}}" alt="Card image cap" style="height:300px">
+                                        <div class="price"></div>
+                                        <a href="#">
+                                            <img class="card-img-top img-fluid" src="#" alt="Card image cap" style="height:300px">
                                         </a>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="card-title"><a href="{% url 'ProductDetails' product_id=product.id %}">{{product.name}}</a></h4>
+                                        <h4 class="card-title"><a href="#"></a></h4>
                                         <ul class="list-inline product-meta">
                                             <li class="list-inline-item">
-                                                <a href="{% url 'CategoryProducts' product_category_id=product.product_category.id %}"><i class="fa fa-folder-open-o"></i>{{product.product_category.name|title}}</a>
+                                                <a href="#"><i class="fa fa-folder-open-o"></i></a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    
                 </div>
             </div>
         </div>
