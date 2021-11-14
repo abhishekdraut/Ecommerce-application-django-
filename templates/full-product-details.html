@@ -329,8 +329,8 @@
 						<ul>
 							
 							{% for products in simillarProducts  %}
-                            <a href=" {% url 'fullPagePoductDetails' product_id=products.id cat_id2=product.product_category_id %} "><img src="{{products.image.url}}"></a>
-                            <li>{{products.name}}</li>
+                            <a href=" {% url 'fullPagePoductDetails' product_id=products.id cat_id2=product.product_category_id %} "><img src="{{products.image.url}}">
+                            <li>{{products.name}}</li></a>
                             {% endfor %}
 							
 							
